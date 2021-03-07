@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Web app</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-size: cover; background-image: url('/img/creamyPage.png')">
+<!--<body>-->
+
+<section class="page-section" style="margin-left: 25%; margin-right: 25%">
+    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <form action="/home" method="post">
+            <div class="form-group has-default">
+                <label>Wprowadź imię</label>
+                <div class="input-group" style="padding-left: 20%; padding-right: 20%">
+                    <input name="firstName" class="form-control" placeholder="Imię..."
+                           type="text" minlength="3" maxlength="30" required>
+                </div>
+            </div>
+
+            <div class="intro-button mx-auto">
+                <button class="btn btn-primary btn-sm" type="submit">Potwierdź</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="page-section" style="margin-left: 25%; margin-right: 25%">
+    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <label>Wynik</label>
+
+        <div class="form-group has-default" style="padding-right: 20%; padding-left: 20%">
+            <div class="input-group">
+                <label th:text="'Imię - ' + ${firstName}"></label>
+            </div>
+        </div>
+
+        <div class="form-group has-default" style="padding-right: 20%; padding-left: 20%">
+            <div class="input-group">
+                <label th:text="'Ilość liter - ' + ${length}"></label>
+            </div>
+        </div>
+
+        <div class="form-group has-default" style="padding-right: 20%; padding-left: 20%">
+            <div class="input-group">
+                <label th:text="'Ilość samogłosek w imieniu - ' + ${vowels}"></label>
+            </div>
+        </div>
+
+        <div class="form-group has-default" style="padding-right: 20%; padding-left: 20%">
+            <div class="input-group">
+                <label th:text="'Ilość spółgłosek w imieniu - ' + ${consonants}"></label>
+            </div>
+        </div>
+
+        <div class="form-group has-default" style="padding-right: 20%; padding-left: 20%">
+            <div class="input-group">
+                <label th:text="'Czy imię jest męskie - ' + ${isMale}"></label>
+            </div>
+        </div>
+
+        <div class="form-group has-default" style="padding-right: 20%; padding-left: 20%">
+            <div class="input-group">
+                <label th:text="'Imię od tyłu - ' + ${fromBehind}"></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
